@@ -35,7 +35,7 @@ def sort_clockwise(*args)
   c = centroid(points)
   points.sort do |a, b|
     a1 = (Math.atan2(a.x - c.x, a.y - c.y).degrees + 360) % 360
-    a2 = (Math.atan2(b.x - c.x, a.y - b.y).degrees + 360) % 360
+    a2 = (Math.atan2(b.x - c.x, b.y - c.y).degrees + 360) % 360
     a1 - a2
   end
 end
